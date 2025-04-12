@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://3g8qxknngb5l"]
+
+[ext_resource type="Script" uid="uid://dxgon6lmv10jw" path="res://Scripts/components/resistor.gd" id="1_evw52"]
+[ext_resource type="Texture2D" uid="uid://bkwin6xm7bkq1" path="res://assets/Components/Resistorz horizontal.png" id="2_amwi1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dnsom"]
+size = Vector2(108, 20)
+
+[node name="Resistor" type="Area2D"]
+script = ExtResource("1_evw52")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.219444, 0.219444)
+texture = ExtResource("2_amwi1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -4)
+shape = SubResource("RectangleShape2D_dnsom")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

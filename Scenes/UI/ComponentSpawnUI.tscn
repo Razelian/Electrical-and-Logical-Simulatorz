@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr1a8peqwxv0v"]
+
+[ext_resource type="Script" uid="uid://cjrw31dkpcsrh" path="res://Scenes/UI/component_spawner.gd" id="1_hwod0"]
+
+[node name="ComponentSpawnUi" type="CanvasLayer"]
+script = ExtResource("1_hwod0")
+
+[node name="Tool Panel" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ResistorButton" type="Button" parent="Tool Panel"]
+layout_mode = 2
+text = "Add Resistor"
+
+[node name="BatteryButton" type="Button" parent="Tool Panel"]
+layout_mode = 2
+text = "Add Battery"
+
+[node name="WireButton" type="Button" parent="Tool Panel"]
+layout_mode = 2
+text = "Add Wire"
+
+[connection signal="pressed" from="Tool Panel/ResistorButton" to="." method="_on_resistor_button_pressed"]
+[connection signal="pressed" from="Tool Panel/BatteryButton" to="." method="_on_battery_button_pressed"]
+[connection signal="pressed" from="Tool Panel/WireButton" to="." method="_on_wire_button_pressed"]

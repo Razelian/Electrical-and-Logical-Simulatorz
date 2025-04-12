@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://mik5aiob36cr"]
+
+[ext_resource type="Script" uid="uid://bk7piw0ig5oox" path="res://Scripts/components/battery.gd" id="1_graop"]
+[ext_resource type="Texture2D" uid="uid://0nigwtgdp7j5" path="res://assets/Components/Battery/Battery.png" id="2_f4sga"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yankq"]
+size = Vector2(133, 71)
+
+[node name="Battery" type="Area2D"]
+script = ExtResource("1_graop")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.485795, 0.485795)
+texture = ExtResource("2_f4sga")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.5, -2.5)
+shape = SubResource("RectangleShape2D_yankq")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
