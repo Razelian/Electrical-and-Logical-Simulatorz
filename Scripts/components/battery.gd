@@ -2,6 +2,7 @@ extends Area2D
 class_name Battery  # Must be FIRST LINE after extends!
 
 # Export must be at class level (no indentation)
+
 export var voltage := 9.0
 
 func _ready():
